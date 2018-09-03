@@ -1,7 +1,6 @@
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
 import React, { Component } from 'react';
-import '../styles/temp.css';
 import StyledApp from '../styles/StyledApp';
 import Li from '../styles/Li';
 import Front from '../styles/Front';
