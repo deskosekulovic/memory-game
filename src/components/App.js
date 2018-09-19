@@ -36,12 +36,12 @@ class App extends Component {
     handleClick(id, url){
         const { elements, click } = this.state;
         let temp=[];
-        (elements[id]['locked'] === false && elements[id][url] === false) && this.setState({elements: elements.map((el,i)=>i===id ? {...el,[url]:true} : el), click:click+1},()=>{
+        (elements[id]['locked'] === false && elements[id][url] === false) &&
+        this.setState({elements: elements.map((el,i)=>i===id ? {...el,[url]:true} : el), click:click+1},()=>{
             this.state.elements.map(el=>{
                 if(el['locked']===false && Object.values(el)[0]===true){
                     temp.push(Object.keys(el)[0]);
                 }
-
             });
             if(this.state.click===2){
                 if(temp[0]!==temp[1]){
@@ -56,7 +56,7 @@ class App extends Component {
                 }else{
                     setTimeout(()=>this.setState({
                         click:0,
-                        elements: this.state.elements.map((el)=>(el[temp[0]] || el[temp[1]]) ? {...el, locked:true} : el)
+                        elements: this.state.elements.map(el=>(el[temp[0]] || el[temp[1]]) ? {...el, locked:true} : el)
                     }),500);
                 }
             }

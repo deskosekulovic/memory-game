@@ -12,7 +12,7 @@ const slideIn = keyframes`
 const Front = styled.div`
     width: 100%;
     height: 147px;
-    position: absolute;
+    ${'' /* position: absolute; */}
     backface-visibility: hidden;
     border: 5px solid gray;
 

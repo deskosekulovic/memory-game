@@ -1,16 +1,30 @@
 import styled from 'styled-components';
 
 const StyledApp = styled.div`
-  height:600px;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  font-size:200%;
-  @media (max-width:1280px) {
-    width: 60%;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  @media (max-width:960px) {
-    width: 100%;
+  h2 {
+    grid-area: title;
+    text-align: center;
+  }
+  ul {
+    grid-area: ul;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  font-size:200%;
+  @media (min-width:960px) {
+    display: grid;
+    grid-template-columns: auto 900px auto;
+    grid-row-gap: 2em;
+    grid-template-areas:
+    ". title ."
+    ". ul ."
+    ". button .";
   }
 `;
 

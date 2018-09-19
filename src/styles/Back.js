@@ -12,7 +12,6 @@ const slideIn = keyframes`
 const Back = styled.div`
     width: 100%;
     height: 147px;
-    position: absolute;
     backface-visibility: hidden;
     border: 5px solid gray;
     img{
