@@ -10,18 +10,18 @@ const slideIn = keyframes`
 `;
 
 const Back = styled.div`
+  width: 100%;
+  height: 147px;
+  backface-visibility: hidden;
+  border: 5px solid gray;
+  img {
     width: 100%;
-    height: 147px;
-    backface-visibility: hidden;
-    border: 5px solid gray;
-    img{
-    	width:100%;
-    	height: 100%;
-    }
+    height: 100%;
+  }
 
-    animation-name: ${slideIn};
-    animation-duration: 300ms;
-    animation-timing-function: ease;
+  animation-name: ${slideIn};
+  animation-duration: 300ms;
+  animation-timing-function: ease;
 `;
 
 export default Back;
